@@ -23,8 +23,7 @@ public class Customer {
 
     private String officeEmail;
 
-    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<FamilyMember> familyMembers;
+    private List<String> familyMembers;
 
     // Getters and Setters
 
@@ -68,11 +67,11 @@ public class Customer {
         this.officeEmail = officeEmail;
     }
 
-    public List<FamilyMember> getFamilyMembers() {
+    public List<String> getFamilyMembers() {
         return familyMembers;
     }
 
-    public void setFamilyMembers(List<FamilyMember> familyMembers) {
+    public void setFamilyMembers(List<String> familyMembers) {
         this.familyMembers = familyMembers;
     }
 }
